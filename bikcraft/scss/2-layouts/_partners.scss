@@ -1,0 +1,60 @@
+@use '../1-bases/variables';
+
+.partners{
+  padding-block: 12rem;
+
+  h2{
+    margin-bottom: 6rem;
+  }
+
+  ul{
+    padding-inline: 2rem;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-inline: auto;
+
+    li{
+      display: flex;
+      padding: 3.2rem;
+      border-left: 2px solid variables.$grey-300;
+
+      &:first-child,
+      &:nth-child(5){
+        border-left: none;
+      }
+
+      &:nth-child(n + 5){
+        border-top: 2px solid variables.$grey-300;
+      }
+
+      img{
+        margin: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-bottom: 6rem;
+
+    h2{
+      margin-bottom: 2rem;
+    }
+
+    ul{
+      grid-template-columns: repeat(2, 1fr);
+
+      li{
+        padding: 2rem;
+
+        &:nth-child(n + 3){
+          border-top: 2px solid variables.$grey-300;
+        }
+
+        &:nth-child(odd){
+          border-left: none;
+        }
+      }
+    }
+  }
+}

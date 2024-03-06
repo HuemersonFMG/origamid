@@ -1,0 +1,83 @@
+@use '../1-bases/variables';
+
+.button{
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: .4rem;
+  box-shadow: 0 1px 2px variables.$opacity-100;
+  text-transform: uppercase;
+  font: 600 1.8rem/1.35 variables.$font-title;
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+
+  @media screen and (max-width: 800px) {
+    a{
+      font-size: 1.6rem;
+      padding: 1.2rem 1.6rem;
+    }
+  }
+
+  &-primary{
+    background: linear-gradient(variables.$primary-100, variables.$primary-200);
+    color: variables.$primary-500;
+  
+    &:hover{
+      background: linear-gradient(variables.$primary-100, variables.$primary-300);
+    }
+  }
+
+  &-secondary{
+    background: variables.$grey-1000;
+    color: variables.$grey-200;
+  
+    &:hover{
+      background: variables.$grey-900;
+    }
+  }
+  
+  &-link{
+    display: inline-block;
+    color: variables.$primary-100;
+    font: 500 2.4rem/1.5 variables.$font-title;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    margin-bottom: 4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: currentColor;
+    }
+
+    &:hover{
+      color: variables.$white;
+    }
+  }
+
+  &-arrow{
+    display: flex;
+    align-items: center;
+
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 1.8rem;
+      height: 1rem;
+      margin-left: 1.2rem;
+      background: url('../img/icones/seta.svg');
+      transition: all .3s ease-in-out;
+    }
+    
+    &:hover{
+      &::after{
+        transform: translateX(.4rem);
+      }
+    }
+  }
+}

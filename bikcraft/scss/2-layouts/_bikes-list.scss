@@ -1,0 +1,71 @@
+@use '../1-bases/variables';
+
+.bikes-list{
+  padding-block: 12rem;
+
+  h2{
+    margin-bottom: 4rem;
+  }
+
+  ul{
+    display: flex;
+    gap: 4rem;
+    padding: 0 2rem 2rem 2rem;
+    max-width: 1440px;
+    margin-inline: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    li{
+      flex: 1;
+      min-width: 28rem;
+
+      a{
+        text-decoration: none;
+        display: block;
+
+        img{
+          margin-bottom: 1.6rem;
+        }
+        
+        h3{
+          color: variables.$grey-1100;
+          margin-bottom: 0.8rem;
+          display: flex;
+          align-items: center;
+
+          &::before{
+            content: '';
+            display: inline-block;
+            width: 1.2rem;
+            height: .8rem;
+            margin-right: .8rem;
+            background: variables.$primary-100;
+            transition: all .3s ease-in-out;
+          }
+        }
+        
+        span{
+          color: variables.$grey-800;
+          padding-left: 2rem;
+        }
+
+        &:hover{
+          h3{
+            &::before{
+              width: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-block: 6rem;
+
+    ul{
+      gap: 2rem;
+    }
+  }
+}

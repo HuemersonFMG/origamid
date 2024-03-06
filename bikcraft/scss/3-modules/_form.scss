@@ -1,0 +1,50 @@
+@use '../1-bases/variables';
+
+.form{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  .form-group{
+    &:nth-child(n+3){
+      grid-column: span 2;
+    }
+
+    .form-label{
+      display: block;
+      font: 400 1.6rem/1.5 variables.$font-title;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-control{
+      font: 400 1.6rem/1.5 variables.$font-body;
+      background: variables.$grey-100;
+      border: 1px solid variables.$grey-300;
+      padding: 1.2rem;
+      border-radius: .4rem;
+      transition: all .1s ease-in-out;
+      width: 100%;
+      
+      &.textarea{
+        resize: vertical;
+      }
+
+      &:focus{
+        outline: none;
+        border-color: variables.$primary-100;
+        background: variables.$white;
+        box-shadow: 0 0 0 2px #fea;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+
+    .form-group{
+      &:nth-child(n+3){
+        grid-column: 1;
+      }
+    }
+  }
+}

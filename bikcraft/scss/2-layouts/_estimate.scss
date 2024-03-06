@@ -1,0 +1,257 @@
+@use '../1-bases/variables';
+
+#estimate{
+  background: linear-gradient(variables.$grey-1100 600px, variables.$white 0);
+
+  .estimate{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    padding-bottom: 12rem;
+
+    &.form{
+      gap: 0;
+    }
+
+    .estimate-product{
+      border-radius: .5rem 0 0 .5rem;
+      background: variables.$black url('../../img/dec/bottom-left.svg') no-repeat bottom 2rem left 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      align-content: start;
+      padding: 6rem;
+      box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .1);
+
+      & > *{
+        grid-column: 1/-1;
+      }
+
+      h2{
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: variables.$grey-500;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: .4rem;
+          height: .8rem;
+          background: variables.$primary-100;
+          position: absolute;
+          left: -1.2rem;
+        }
+      }
+
+      #bikcraft{
+        &:checked ~ #estimate-bikcraft{
+          display: block;
+          display: grid;
+          gap: 2rem;
+        }
+      }
+
+      #safe{
+        &:checked ~ #estimate-safe{
+          display: block;
+          display: grid;
+          gap: 2rem;
+        }
+      }
+
+      input{
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+
+        &:checked + label{
+          background: variables.$white;
+          color: variables.$grey-1100;
+
+          & + .estimate-details{
+            display: grid !important;
+          }
+
+          &::before{
+            border-color: variables.$grey-700;
+            box-shadow: inset 0 0 0 .3rem variables.$white, inset 0 0 0 .6rem variables.$grey-700;
+          }
+
+          span{
+            display: inline-block;
+          }
+
+          &:focus + label{
+            box-shadow: 0 0 0 .2rem variables.$primary-100;
+            border: 1px solid variables.$black;
+          }
+        }
+      }
+
+      label{
+        font: 400 1.6rem/1.5 variables.$font-title;
+        color: variables.$grey-400;
+        background-color: variables.$grey-1000;
+        padding: 1.2rem 1.6rem;
+        border-radius: .4rem;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        border: .1rem solid variables.$black;
+        grid-column: initial;
+        transition: all .3s ease-in-out;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          box-sizing: border-box;
+          width: 1.2rem;
+          height: 1.2rem;
+          border: .1rem solid variables.$grey-600;
+          border-radius: 50%;
+          margin-right: .8rem;
+        }
+
+        &:hover{
+          background: variables.$grey-900;
+        }
+
+        span{
+          display: none;
+        }
+      }
+
+      .estimate-content{
+        display: none;
+
+        h2{
+          margin-bottom: 0rem;
+        }
+
+        &#estimate-bikcraft{
+          margin-top: 1.6rem;
+
+          .estimate-details{
+            display: none;
+            background: variables.$white;
+            padding: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            border-radius: .4rem;
+            align-items: center;
+
+            ul{
+              li{
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.8rem;
+                color: variables.$grey-800;
+                
+                img{
+                  width: 1.6rem;
+                  margin-right: 0.8rem;
+                }
+
+              }
+            }
+          }
+        }
+        
+        &#estimate-safe{
+          margin-top: 1.6rem;
+        }
+        
+      }
+    }
+
+    .estimate-datas{
+      padding: 6rem;
+      box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .1);
+      border-radius: 0 .5rem .5rem 0;
+      background: variables.$white url('../../img/dec/bottom-right.svg') no-repeat bottom 2rem right 2rem;
+
+      h2{
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: variables.$grey-1100;
+        margin-bottom: 2.4rem;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: .4rem;
+          height: .8rem;
+          background: variables.$primary-100;
+          position: absolute;
+          left: -1.2rem;
+        }
+      }
+
+      .data-person{
+        margin-bottom: 3.2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 2rem;
+
+        .form-group{
+          margin-bottom: 1.6rem;
+
+          .form-label{
+            color: variables.$grey-1100;
+          }
+        }
+      }
+
+      .delivery{
+        margin-bottom: 3.2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 2rem;
+
+        .form-group{
+          margin-bottom: 1.6rem;
+
+          &:nth-child(n+3) {
+            grid-column: initial;
+          }
+
+          .form-label{
+            color: variables.$grey-1100;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .estimate-product{
+        padding: 3.2rem;
+      }
+
+      .estimate-datas{
+        padding: 3.2rem;
+      }
+    }
+
+    @media screen and (max-width: 800px){
+      grid-template-columns: 1fr;
+
+      .estimate-product{
+        border-radius: .5rem .5rem 0 0;
+        background: variables.$black;
+      }
+
+      .estimate-datas{
+        border-radius: 0 0 .5rem .5rem ;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .estimate-product{
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

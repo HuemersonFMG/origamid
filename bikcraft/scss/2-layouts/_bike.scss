@@ -1,0 +1,145 @@
+@use '../1-bases/variables';
+
+#bike{
+  .title-bg{
+    div{
+      .title{
+        p{
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .bikes-list{
+    ul{
+      padding: 0 0 2rem 0;
+    }
+  }
+}
+
+.bike{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  gap: 4rem;
+  padding-block: 6rem;
+
+  .bike-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    img{
+      flex: 1;
+      min-width: 20rem;
+
+      &:first-child{
+        min-width: 100%;
+      }
+    }
+  }
+
+  .bike-content{
+    & > p{
+      margin-bottom: 3.2rem;
+      color: variables.$grey-500;
+    }
+
+    .bike-purchase{
+      display: grid;
+      grid-template-columns: max-content auto;
+      align-items: center;
+      justify-items: start;
+      gap: .8rem 1.2rem;
+      margin-bottom: 4rem;
+
+      a{
+        grid-row: span 2;
+        max-width: initial;
+      }
+
+      span{
+        display: flex;
+        align-items: center;
+        background: variables.$black;
+        color: variables.$grey-600;
+        gap: .8rem;
+        padding: .4rem .8rem;
+        border-radius: .4rem;
+      }
+    }
+
+    h2{
+      text-transform: uppercase;
+      letter-spacing: .15rem;
+      margin-bottom: 1.2rem;
+      color: variables.$white;
+    }
+  
+    ul{
+      padding: 3.2rem;
+      background: variables.$black;
+      border-radius: .4rem;
+
+      &:first-of-type{
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.2rem;
+      }
+
+      &:last-child li{
+        padding-block: .4rem;
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:last-child){
+          border-bottom: 1px solid variables.$grey-1100;
+        }
+      }
+
+      li{
+        color: variables.$grey-500;
+
+        img{
+          width: 2.4rem;
+          margin-bottom: 0.8rem;
+        }
+
+        h3{
+          color: variables.$white;
+          margin-bottom: 0.8rem;
+        }
+
+        span{
+          color: variables.$grey-600;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    
+    .bike-images{
+      grid-row: 2;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .bike-content{
+      .bike-purchase{
+        grid-template-columns: 1fr;
+      }
+
+      ul{
+        &:first-of-type{
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

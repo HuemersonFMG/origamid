@@ -1,0 +1,102 @@
+@use '../1-bases/variables';
+
+#contact{
+  background: linear-gradient(variables.$grey-1100 600px, variables.$grey-100 0);
+
+  .contact{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+
+    .contact-datas{
+      padding: 6rem;
+      box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .1);
+      background: variables.$black url('../../img/dec/bottom-left.svg') no-repeat bottom 2rem left 2rem;
+      border-radius: 5px 0 0 5px;
+
+      h2{
+        color: variables.$white;
+        margin-bottom: 6rem;
+      }
+
+      .contact-address{
+        margin-bottom: 3.2rem;
+        padding-left: 2.8rem;
+        background: url('../img/icones/local.svg') no-repeat 0 .2rem;
+
+        p{
+          color: variables.$grey-400;
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      .contact-means{
+        a{
+          display: block;
+          max-width: max-content;
+          color: variables.$grey-400;
+          margin-bottom: 0.8rem;
+          padding-left: 2.8rem;
+          text-decoration: none;
+          transition: all .3s ease-in-out;
+
+          &:hover{
+            color: variables.$white;
+          }
+
+          &:first-child{
+            background: url('../../img/icones/email.svg') no-repeat 0 .2rem;
+          }
+
+          &:nth-child(2){
+            margin-bottom: 3.2rem;
+          }
+
+          &:nth-child(3){
+            background: url('../../img/icones/email.svg') no-repeat 0 .2rem;
+            margin-bottom: 6rem;
+          }
+        }
+      }
+
+      .contact-social{
+        display: flex;
+        gap: 3.2rem;
+        padding-left: 2.8rem;
+        margin-bottom: 12px;
+      }
+    }
+    
+    .contact-form{
+      padding: 6rem;
+      box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .1);
+      background: variables.$white url('../../img/dec/bottom-right.svg') no-repeat bottom 2rem right 2rem;
+      border-radius: 0 5px 5px 0;
+    }
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+
+      .contact-datas{
+        padding: 2rem;
+        border-radius: .5rem .5rem 0 0;
+        background: variables.$black;
+
+        h2{
+          margin-bottom: 3.2rem;
+        }
+
+        .contact-means{
+          a{
+            &:nth-child(3){
+              margin-bottom: 3.2rem;
+            }
+          }
+        }
+      }
+
+      .contact-form{
+        padding: 2rem;
+      }
+    }
+  }
+}

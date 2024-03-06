@@ -1,0 +1,78 @@
+@use '../1-bases/variables';
+
+.stores{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 4rem;
+  padding-block: 12rem;
+
+  h2{
+    grid-column: 1/-1;
+    margin-bottom: 6rem;
+  }
+
+  .stores-item{
+    border-radius: .4rem;
+    background: variables.$white;
+    box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .1);
+
+    img{
+      border-radius: 4px 4px 0 0;
+    }
+
+    .stores-content{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.2rem 1.6rem;
+      padding: 3.2rem;
+
+      h3{
+        grid-column: 1/-1;
+      }
+
+      .stores-datas{
+        display: grid;
+        gap: .8rem;
+        border-left: 2px solid variables.$grey-300;
+        padding-left: 1.2rem;
+
+        p{
+          color: variables.$grey-800;
+        }
+  
+        a{
+          color: variables.$grey-800;
+          text-decoration: none;
+        }
+      }
+    
+      .stores-time{
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        color: variables.$grey-1100;
+
+        img{}
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    gap: 2rem;
+    padding-top: 6rem;
+
+    h2{
+      margin-bottom: 3.2rem;
+    }
+    
+    .stores-item{
+      .stores-content{
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}

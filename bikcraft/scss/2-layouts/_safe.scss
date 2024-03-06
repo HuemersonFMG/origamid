@@ -1,0 +1,40 @@
+@use '../1-bases/variables';
+
+.safe-bg{
+  background: variables.$grey-1100;
+  box-shadow: inset 0 120px variables.$white, inset 0 -120px variables.$black;
+
+  .safe{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    .safe-content{
+      padding-block: 18rem;
+
+      h2{
+        color: variables.$white;
+        margin-bottom: 3.2rem;
+      }
+
+      p{
+        color: variables.$grey-500;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    box-shadow: inset 0 -60px variables.$black;
+
+    .safe{
+      grid-template-columns: 1fr;
+
+      .safe-content{
+        grid-row: 1;
+        padding-top: 4rem;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

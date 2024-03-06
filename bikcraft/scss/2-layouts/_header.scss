@@ -1,0 +1,76 @@
+@use '../1-bases/variables';
+
+.header-bg{
+  background: variables.$black;
+}
+
+.header{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.header-menu{
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.header-menu a{
+  color: variables.$white;
+  display: inline-block;
+  padding-block: 1.6rem;
+  position: relative;
+  text-decoration: none;
+
+  &:hover::after,
+  &.active::after{
+    width: 100%;
+  }
+
+  &::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: .2rem;
+    background: variables.$white;
+    margin-top: .4rem;
+    transition: all .3s ease-in-out;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-menu{
+    gap: 2rem;
+  }
+
+  .header-menu a {
+    background: variables.$grey-1100;
+    padding: 1.2rem 1.6rem;
+    border-radius: .4rem;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      background: variables.$grey-1000;
+    }
+
+    &::after{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-menu{
+    gap: 1.2rem;
+  }
+
+  .header-menu a{
+    padding: .8rem 1.2rem;
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,49 @@
+@use '../1-bases/variables';
+
+.title-bg{
+  padding-block: 6rem;
+  background: variables.$grey-1100;
+
+  .title{
+    background: url('../../img/dec/top-right.svg') no-repeat top right 2rem;
+    p{
+      color: variables.$grey-500;
+      margin-bottom: .4rem;
+    }
+
+    h1{
+      color: variables.$white;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-block: 4rem;
+
+    .title{
+      p{
+        font-size: 1.6rem;
+        text-transform: lowercase;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.terms{
+  padding-block: 8rem;
+
+  h2{
+    margin-bottom: 2rem;
+    color: variables.$grey-1100;
+  }
+
+  p + h2{
+    margin-top: 4rem;
+  }
+
+  p{
+    max-width: 75ch;
+    margin-bottom: 2.4rem;
+    color: variables.$grey-1000;
+  }
+}
