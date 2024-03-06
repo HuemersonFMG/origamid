@@ -1,0 +1,33 @@
+@use './variables';
+
+body {
+  background: variables.$black;
+  color: variables.$grey;
+  font-family: sans-serif;
+}
+
+h1 {
+  padding: 10px 0;
+  color: variables.$light;
+}
+
+.border-red{
+  border: 2px solid variables.$light;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea{
+  border-radius: 1px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+  box-shadow: 0 0 0px 2px variables.$light;
+  margin-block: 6px;
+
+  &:focus{
+    border: 1px solid variables.$black;
+    outline: 1px solid variables.$black;
+  }
+}

@@ -1,0 +1,23 @@
+@use './variables';
+
+.navbar {
+  ul {
+    display: flex;
+    gap: 8px;
+    
+    li {
+      a {
+        padding: 5px;
+        color: variables.$light;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+          color: variables.$grey;
+          text-decoration: underline;
+          text-underline-offset: 4px;
+        }
+      }
+    }
+  }
+}
+

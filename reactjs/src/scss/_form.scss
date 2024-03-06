@@ -1,0 +1,20 @@
+@use './variables';
+
+.form{
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+
+  &__group{
+    margin-bottom: 16px;
+    
+  }
+  &__label{
+    display: block;
+    color: variables.$light;
+  }
+
+  &__control{
+    width: 100%;
+  }
+}

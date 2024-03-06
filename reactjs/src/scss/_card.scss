@@ -1,0 +1,13 @@
+.card {
+  max-width: 380px;
+
+  &__img {
+    width: 100%;
+    height: 150px;
+    vertical-align: middle;
+  }
+
+  &__body {
+    padding: 0 20px;
+  }
+}
