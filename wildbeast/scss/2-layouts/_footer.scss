@@ -1,0 +1,12 @@
+@use '../1-bases/variables';
+
+.footer{
+	grid-area: footer;
+	background: linear-gradient(135deg, variables.$primary, variables.$secondary);
+}
+
+.footer__text{
+	color: variables.$white;
+	text-align: center;
+	padding: variables.$gap;
+}

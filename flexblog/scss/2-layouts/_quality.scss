@@ -1,0 +1,49 @@
+@use '../1-bases/variables';
+
+.quality{
+  max-width: 960px;
+	margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quality__item{
+	flex: 1 1 300px;
+	margin: 20px 10px;
+}
+
+.quality__title{
+	font-size: 2.25em;
+	color: variables.$greyLight;
+	margin-bottom: 20px;
+}
+
+.quality__title::before{
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 30px;
+	background: currentColor;
+	margin-right: 10px;
+}
+
+.quality__item:nth-of-type(3n+1) 
+.quality__title::before{
+	background: variables.$purple;
+}
+
+.quality__item:nth-of-type(3n+2) 
+.quality__title::before{
+	background: variables.$pink;
+}
+
+.quality__item:nth-of-type(3n+3) 
+.quality__title::before{
+	background: variables.$blue;
+}
+
+.quality__text{
+	font-size: 1.125em;
+	line-height: 1.4;
+	color: variables.$greyDark;
+}

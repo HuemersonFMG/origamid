@@ -1,0 +1,35 @@
+@use '../1-bases/variables';
+
+.about{
+	border-top: 2px solid variables.$blue1;
+	border-bottom: 2px solid variables.$blue1;
+	padding: 60px 10px;
+}
+
+.about__info{
+	flex: 2 1 300px;
+	margin: 0 10px
+}
+
+.about__title{
+	font-size: 3em;
+	margin-bottom: .5em;
+}
+
+.about__text{
+	font-size: 1.25;
+	line-height: 1.4em;
+	color: variables.$greyDark;
+	margin-bottom: 1em;
+}
+
+.about__img{
+	flex: 1 1 160px;
+	margin: 0 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .about__title {
+    font-size: 2em;
+	}
+}

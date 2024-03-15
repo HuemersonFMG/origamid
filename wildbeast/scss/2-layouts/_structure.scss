@@ -1,0 +1,30 @@
+.structure{
+	display: grid;
+	grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+	grid-template-areas:
+	"header header header"
+	"sidenav content anuncio"
+	"footer footer footer";
+}
+
+@media only screen and (max-width: 1200px){
+	.structure{
+		grid-template-areas:
+		"header header header"
+		"sidenav content content"
+		"sidenav anuncio anuncio"
+		"footer footer footer";
+	}
+}
+
+@media only screen and (max-width: 760px){
+	.structure{
+		grid-template-columns: 100%;
+		grid-template-areas:
+		"header"
+		"sidenav"
+		"content"
+		"anuncio"
+		"footer";
+	}
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  
+    <!-- SEO -->
+    <meta name="description" content="Flexblog">
+    <meta name="keywords" content="Flexblog, blog, flex box">
+  
+    <!-- OG -->
+    <meta property="og:title" content="Origamid | Flexblog" />
+    <meta property="og:type" content="website" />
+  
+    <!-- Google Fonts - Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+    <!-- CSS -->
+    <link rel="preload" href="./css/style.min.css" as="style">
+    <link rel="stylesheet" href="./css/style.min.css">
+  
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+    <!-- JS -->
+    <script type="module" src="./js/script.js" defer></script>
+  
+    <title>Origamid - Flexblog</title>
+  </head>
+<body>
+  
+  <div class="superinfo">
+    <div class="container">
+      <div class="flex">
+        <p class="superinfo__hour">Seg / Sex - 08:00 às 18:00</p>
+        <a class="superinfo__tel" href="tel:+5511987654321">+55 (11) 9 8765-4321</a>
+        <p class="superinfo__local">Av. Ali Perto, 404, São Paulo - SP</p>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="flex">
+        <div class="navbar__logoBox"><a class="navbar__home" href="./">FlexBlog</a></div>
+
+        <nav class="nav">
+          <ul class="flex-wrap">
+            <li class="nav__item"><a class="nav__link" href="#about">Sobre</a></li>
+            <li class="nav__item"><a class="nav__link" href="#products">Produtos</a></li>
+            <li class="nav__item"><a class="nav__link" href="#price">Preço</a></li>
+            <li class="nav__item"><a class="nav__link" href="#quality">Qualidade</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <h1 class="intro">Novos valores e<br>Propriedades de CSS</h1>
+
+  <div class="container">
+    <section id="about" class="about">
+      <div class="flex-wrap">
+        <div class="about__info">
+          <h1 class="about__title">Sobre</h1>
+          <p class="about__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat eligendi earum voluptates assumenda officiis provident quidem, ut iure? Similique nostrum voluptate iusto repudiandae. Modi veritatis esse unde? Aperiam ut odio molestias, pariatur nostrum consequatur voluptatibus.</p>
+          <p class="about__text">Possimus ullam laboriosam eos, quasi beatae voluptatibus laborum repellat repellendus aspernatur esse, deleniti, itaque vero? Enim veniam nostrum eum autem consectetur eveniet illo nobis! Iste temporibus perspiciatis earum ullam fugit magni excepturi dolore. Quaerat voluptatem nisi ad?</p>
+        </div>
+
+        <div class="about__img"><img src="./img/sobre1.jpg" alt="Sobre 1"></div>
+        <div class="about__img"><img src="./img/sobre2.jpg" alt="Sobre 2"></div>
+      </div>
+    </section>
+  </div>
+
+  <section id="products" class="products">
+    <div class="container">
+      <h1 class="products__title">Produtos</h1>
+      <div class="flex-wrap flex-wrap--end">
+        <div class="product__item">
+          <h2 class="products__subtitle products__subtitle--purple">Purple</h2>
+          <img src="./img/produtos1.jpg" alt="Produtos 1">
+        </div>
+        <div class="product__item pink">
+          <h2 class="products__subtitle products__subtitle--pink">Pink</h2>
+          <img src="./img/produtos2.jpg" alt="Produtos 2">
+        </div>
+        <div class="product__item blue">
+          <h2 class="products__subtitle products__subtitle--blue">Blue</h2>
+          <img src="./img/produtos3.jpg" alt="Produtos 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="price" class="price flex-wrap flex-wrap--end">
+    <div class="price__item">
+      <h2 class="price__title">Cobre</h2>
+      <span class="price__value"><sup>R$</sup>19</span>
+      <ul class="price__list">
+        <li class="price__benefit">Planos Ilimitado</li>
+        <li class="price__benefit">Acesso Restrito</li>
+        <li class="price__benefit">Conteúdo Secreto</li>
+        <li class="price__benefit">Suporte 24h</li>
+      </ul>
+      <a class="price__btn" href="#">Comprar</a>
+    </div>
+
+    <div class="price__item">
+      <h2 class="price__title">Prata</h2>
+      <span class="price__value"><sup>R$</sup>39</span>
+      <ul class="price__list">
+        <li class="price__benefit">Planos Ilimitado</li>
+        <li class="price__benefit">Acesso Restrito</li>
+        <li class="price__benefit">Conteúdo Secreto</li>
+        <li class="price__benefit">Suporte 24h</li>
+        <li class="price__benefit">Compra Exclusiva</li>
+      </ul>
+      <a class="price__btn" href="#" class="btn">Comprar</a>
+    </div>
+
+    <div class="price__item">
+      <h2 class="price__title">Ouro</h2>
+      <span class="price__value"><sup>R$</sup>79</span>
+      <ul class="price__list">
+        <li class="price__benefit">Planos Ilimitado</li>
+        <li class="price__benefit">Acesso Restrito</li>
+        <li class="price__benefit">Conteúdo Secreto</li>
+        <li class="price__benefit">Suporte 24h</li>
+        <li class="price__benefit">Compra Exclusiva</li>
+        <li class="price__benefit">Downloads dos Itens</li>
+      </ul>
+      <a class="price__btn" href="#" class="btn">Comprar</a>
+    </div>
+  </section>
+
+  <section id="quality" class="quality">
+    <div class="quality__item">
+      <h2 class="quality__title">Inteligente</h2>
+      <p class="quality__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos officia ut laudantium animi, aspernatur sint ad maxime sequi tempore illo?</p>
+    </div>
+    <div class="quality__item">
+      <h2 class="quality__title">Compacto</h2>
+      <p class="quality__text">Voluptates natus nisi consequuntur vitae eligendi beatae. Voluptatem laudantium, accusantium adipisci, ut sequi vel at quam aspernatur minima cupiditate impedit ea esse? Eum ab modi soluta dolores, cum non enim cupiditate distinctio dolorem suscipit.</p>
+    </div>
+    <div class="quality__item">
+      <h2 class="quality__title">Econômico</h2>
+      <p class="quality__text">Sequi ullam maxime alias, veniam qui enim veritatis pariatur dicta aspernatur officiis esse illum distinctio accusantium magnam saepe totam? Blanditiis, culpa fugit!</p>
+    </div>
+    <div class="quality__item">
+      <h2 class="quality__title">Transparente</h2>
+      <p class="quality__text">Minus, sapiente odio cupiditate quaerat sunt aperiam iste architecto! Error laudantium explicabo esse voluptatibus quos, at voluptates, harum minus earum eaque voluptate.</p>
+    </div>
+    <div class="quality__item">
+      <h2 class="quality__title">Opaco</h2>
+      <p class="quality__text">Dolore tempore neque quasi? Nulla voluptatum mollitia fugit, rerum voluptatem id architecto necessitatibus, similique dolor temporibus totam magni omnis esse alias vel. Minus reiciendis temporibus odio numquam laborum error inventore itaque quis accusamus asperiores.</p>
+    </div>
+    <div class="quality__item">
+      <h2 class="quality__title">Sustentável</h2>
+      <p class="quality__text">Deserunt, eos tempora explicabo deleniti optio corporis laborum rem magnam iure? Rerum magnam fugit in omnis deserunt quo aspernatur modi eius aliquam?</p>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="flex-wrap">
+      <div class="newsletter__info">
+        <h1 class="newsletter__title">Newsletter</h1>
+        <p class="newsletter__text">Consequuntur dolore eligendi, reiciendis fuga officia facere.</p>
+      </div>
+
+      <form class="newsletter__form flex-wrap" action="">
+        <input id="inputNewsletter" class="newsletter__input" type="text" placeholder="Seu melhor E-mail">
+        <button class="newsletter__btn">Assinar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__text">FlexBlog &copy; <span data-js="yearFooter" class="footer__year">0000</span> | Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

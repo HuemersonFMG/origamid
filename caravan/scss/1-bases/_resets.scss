@@ -1,0 +1,16 @@
+@use './variables';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::selection{
+  background: variables.$dark;
+  color: variables.$white;
+}
+
+body{
+  padding-top: 76.5px;
+}

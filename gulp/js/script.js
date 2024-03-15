@@ -1,0 +1,1 @@
+"use strict";console.log("Hello World"),AOS.init();var yearFooter=document.querySelector('[data-js="yearFooter"]'),date=new Date,year=date.getFullYear();yearFooter.innerText=year;

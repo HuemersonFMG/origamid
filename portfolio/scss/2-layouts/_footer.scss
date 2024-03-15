@@ -1,0 +1,50 @@
+@use '../1-bases/variables';
+
+.footer{
+  background: variables.$black;
+}
+
+.footer-container{
+  max-width: 1200px;
+  padding: 120px 20px 60px 20px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  align-items: center;
+}
+
+.footer-text{
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: variables.$grey-700;
+}
+
+.footer-contact li{
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: variables.$white;
+  margin-bottom: 30px;
+}
+
+.footer-contact li a{
+  color: variables.$white;
+}
+
+.footer-copy{
+  grid-column: 1 / -1;
+  font-size: 1.125rem;
+  color: variables.$grey-600;
+}
+
+@media screen and (max-width: 800px) {
+  .footer-contact{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-contact li{
+    font-size: 1.5rem;
+  }
+}

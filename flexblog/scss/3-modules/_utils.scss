@@ -1,0 +1,15 @@
+@use './mixins';
+
+.flex{
+  @include mixins.flex(row, center, space-between);
+	flex-wrap: wrap;
+}
+
+.flex-wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-wrap--end{
+	align-items: flex-end;
+}

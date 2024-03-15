@@ -1,0 +1,118 @@
+@use '../1-bases/variables';
+
+.experience{
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+
+.experience .subtitle{
+  color: variables.$grey-300;
+}
+
+.experience-text{
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  color: variables.$grey-400;
+}
+
+.experience-text strong{
+  color: variables.$black-100;
+}
+
+.company{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  padding: 20px;
+  background: variables.$grey-100;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.company::before{
+  content: '';
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(variables.$green-100, variables.$green-200);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.company-year{
+  position: absolute;
+  top: 22px;
+  left: -100px;
+  text-align: right;
+  width: 80px;
+  color: variables.$grey-400;
+  font-size: .875rem;
+}
+
+.company-title{
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.company-text{
+  font-size: .875rem;
+  line-height: 1.4;
+  color: variables.$grey-400;
+}
+
+.company-skills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.company-skills li{
+  font-size: .875rem;
+  line-height: 1.4;
+  border-radius: 4px;
+  background: variables.$white;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .experience{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .experience .subtitle{
+    color: variables.$black-100;
+  }
+
+  .experience-text{
+    font-size: 1.25rem;
+  }
+
+  .company-year{
+    position: initial;
+    order: 1;
+    width: initial;
+    text-align: left;
+  }
+
+  .company-year::before{
+    content: 'Ano: ';
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .company{
+    grid-template-columns: 1fr;
+  }
+}

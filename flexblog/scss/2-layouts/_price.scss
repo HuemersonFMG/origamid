@@ -1,0 +1,92 @@
+@use '../1-bases/variables';
+
+.price{
+	background: variables.$grey;
+	padding: 60px;
+}
+
+.price__item{
+	flex: 1 1 260px;
+	border: 4px solid variables.$white;
+	padding: 20px;
+	margin: 10px;
+}
+
+.price__title{
+	font-size: 3em;
+	color: variables.$greyDark;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.price__value{
+	max-width: 300px;
+	margin: 20px auto;
+	display: block;
+	font-size: 3em;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px 0 5px 0;
+	border-top: 4px solid variables.$white;
+	border-bottom: 4px solid variables.$white;
+}
+
+.price__value sup{
+	font-size: 1.5rem;
+}
+
+.price__list{
+	max-width: 300px;
+	margin: 20px auto;
+	font-size: 1.2em;
+	font-style: italic;
+	color: variables.$greyDark;
+}
+
+.price__benefit::after{
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	background: variables.$blue2;
+	border-radius: 50%;
+}
+
+.price__benefit{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.price__btn{
+	max-width: 300px;
+	display: block;
+	margin: 20px auto;
+	border: 2px solid variables.$dark;
+	color: variables.$dark;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.25em;
+	padding: 15px 0;
+	transition: all .3s ease-in-out;
+}
+
+.price__btn:hover{
+	background: variables.$dark;
+	color: variables.$white;
+}
+
+@media screen and (max-width: 800px) {
+  .price {
+    padding-left: 10px;
+    padding-right: 10px;
+	}
+	.price .price__item:nth-child(3){
+		order: -2;
+	}
+	.price .price__item:nth-child(2){
+		order: -1;
+	}
+}

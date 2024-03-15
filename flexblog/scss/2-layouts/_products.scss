@@ -1,0 +1,40 @@
+@use '../1-bases/variables';
+
+.products{
+	margin: 60px auto;
+}
+
+.products__title{
+	font-size: 3em;
+	margin: 0 10px 60px 10px;
+}
+
+.product__item{
+	flex: 1 1 175px;
+	margin: 10px;
+}
+
+.products__subtitle{
+	font-size: 3em;
+	color: variables.$greyLight;
+	background: variables.$grey;
+	padding: 60px 20px;
+}
+
+.products__subtitle--purple{
+	border-top: 8px solid variables.$purple;
+}
+
+.products__subtitle--pink{
+	border-top: 8px solid variables.$pink;
+}
+
+.products__subtitle--blue{
+	border-top: 8px solid variables.$blue;
+}
+
+@media screen and (max-width: 800px) {
+  .products__title {
+    font-size: 2.5em;
+	}
+}

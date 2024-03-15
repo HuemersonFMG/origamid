@@ -1,0 +1,40 @@
+@use './variables';
+
+:root{
+  font-size: 62.5%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+	font-family: variables.$font-body;
+	color: variables.$dark;
+}
+
+::selection{
+  background: variables.$dark;
+  color: variables.$pink;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+ul, li{
+  list-style: none;
+}
+
+a{
+	text-decoration: none
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
